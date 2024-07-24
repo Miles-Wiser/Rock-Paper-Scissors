@@ -42,7 +42,7 @@ int main() {
             break;
     }
     
-    if(user_option - comp_option == -2 or 1) {
+    if(user_option - comp_option == -2 or user_option - comp_option == 1) {
         std::cout << "You win, I guess.";
     }
     else if(user_option - comp_option == 0) {
