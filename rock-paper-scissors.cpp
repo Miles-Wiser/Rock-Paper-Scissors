@@ -28,7 +28,7 @@ int main() {
             break;
     }
     
-    int comp_option = 3; //Figure out how to make this random
+    int comp_option = 1; //Figure out how to make this random
     
     switch (comp_option) {
         case 1:
@@ -40,6 +40,16 @@ int main() {
         case 3:
             std::cout << "I choose Scissors\n";
             break;
+    }
+    
+    if(user_option - comp_option == -2 or 1) {
+        std::cout << "You win, I guess.";
+    }
+    else if(user_option - comp_option == 0) {
+        std::cout << "It is a draw.";
+    }
+    else {
+        std::cout << "You lose, I win!";
     }
     
     return 0;
