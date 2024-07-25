@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdlib> // maybe use srand() or rand()?
+#include <time.h>
 
 int main() {
     
@@ -28,7 +29,8 @@ int main() {
             break;
     }
     
-    int comp_option = 1; //Figure out how to make this random
+    srand(time_t(NULL));
+    int comp_option = (rand() % 3) +1; //Figure out how to make this random
     
     switch (comp_option) {
         case 1:
