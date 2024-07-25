@@ -1,14 +1,17 @@
 
-// https://www.programiz.com/cpp-programming/online-compiler/
+// ========== Libraries ==========
 
 #include <iostream>
-#include <cstdlib> // maybe use srand() or rand()?
+#include <cstdlib>
 #include <time.h>
+
+// ========== Main Loop ==========
 
 int main() {
     
     std::cout << "Choose 1 for rock,  2 for paper, or 3 for scissor: ";
     
+    // Sets up player's choice
     int user_option;
     std::cin >> user_option;
     while(1 > user_option or user_option > 3) {
@@ -29,8 +32,9 @@ int main() {
             break;
     }
     
+    // Sets up computer's choice
     srand(time_t(NULL));
-    int comp_option = (rand() % 3) +1; //Figure out how to make this random
+    int comp_option = (rand() % 3) +1; // This is not fully random yet. Fix this
     
     switch (comp_option) {
         case 1:
@@ -44,6 +48,7 @@ int main() {
             break;
     }
     
+    // Compares player's choice versus the computer's and prints the result
     if(user_option - comp_option == -2 or user_option - comp_option == 1) {
         std::cout << "You win, I guess.";
     }
