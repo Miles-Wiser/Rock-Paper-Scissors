@@ -34,7 +34,9 @@ int main() {
     
     // Sets up computer's choice
     srand(time_t(NULL));
-    int comp_option = (rand() % 3) +1; // This is not fully random yet. Fix this
+    int comp_option = (rand() % 3) +1; // This is not fully random yet. Fix this. The computer always selects paper.
+    // It may be a product of the onlie compiler giving the same time for "srand(NUUL)." Try this in visual studios.
+    // In "C++ Shell," another online compiler, appears to always choose scissors.
     
     switch (comp_option) {
         case 1:
